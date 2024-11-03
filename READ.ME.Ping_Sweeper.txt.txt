@@ -1,0 +1,5 @@
+This is a simple ping sweep tool that can be used to ping a range of IP-adresses in order to find out what servers are responding.
+It can be run in the console by typing in """Ping.py --start-ip 1.1.1.X --end-ip 1.1.1.Y""" 
+Additionally the flag """--timeout X""" can be added to limit the time spent waiting for a response from a server. 
+This can be useful if you are attempting to scan a large set of adresses. 
+(NOTE: This can prevent the program from getting a response from a server that is actually running as it might take a bit longer depending on the server)

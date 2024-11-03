@@ -1,0 +1,7 @@
+This tool is a subdomain enumerator, which can be used to find non-public subdomains for a specific URL
+The program will send a http request to the target URL with different subdomains attached at the beginning
+The subdomains will be loaded in from a seperate file, and will send a http request to the word_from_wordlist.URL (login.example.com, admin.example.com, etc)
+The program can be run from the terminal by typing """python Subdomainen.py --domain URL --wordlist subdomains.txt"""
+The domain flag is the adress of the website that is to be attacked and the --wordlist flag is the name of the document containing all the subdomain names.
+(NOTE: The worldist should be a text document only containing one word per row, se words.txt for an example)
+
