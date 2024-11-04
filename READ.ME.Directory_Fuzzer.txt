@@ -3,4 +3,4 @@ The program will send a http request to the target url with different suffixes d
 It will send a http request to the targeted url + /word from wordlist (example.com/admin, example.com/secrets, etc.)
 This program can be run from the terminal by typing """python fuzzy.py --url http://example.com --wordlist words.txt
 The two flags are --url, which is the url that is being targeted and --wordlist, which is a wordlist documnet with all the suffixes you wish to attempt
-(NOTE: The worldist should be a text document only containing one word per row, se words.txt for an example)
+(NOTE: The worldist should be a text document only containing one word per row, se example.txt for an example)
