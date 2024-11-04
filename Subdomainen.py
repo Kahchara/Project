@@ -9,7 +9,7 @@ import requests
 def subdomain_enum(domain, wordlist):
     found_subdomain = []
 
-#With open will allow us to print out the found subdomains to a separate text document
+#With open will allow us to read in the subdomain word from a separate text document
     with open(wordlist, 'r') as file:
         for word in file:
             word = word.strip()
