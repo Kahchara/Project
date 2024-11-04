@@ -4,4 +4,5 @@ This program can be run in the terminal by typing """python SSH.py --host 1.1.1.
 The host flag is the IP-adress that is being targeted
 The username is the username that is being attempted, such as admin
 The password-list is the name of the document containing all the passwords to be attmempted with the username. 
-(NOTE: The password-list should have a singel password on each row, see pass_example.txt for a demostration)
+(NOTE: The password-list should have a single password on each row, see example.txt for a demostration)
+
